@@ -9,8 +9,20 @@ const barChartFunc = (divRef, dailies) => {
   const dateExt = d3.extent(dateDimension.top(Infinity), d => d.daily_date);
   const dateGroupLength = dateDimension.group().reduceSum(d => d.cameras[0].data_length);
 
-  console.log(dateExt);
-  console.log(dateGroupLength.top(Infinity));
+  //const heapByDate = dailies.heap.by(d => d.cameras[0].data_length);
+
+  // function reduceAdd(p,v) {
+  //   console.log('add', p);
+  //   console.log('v', v.cameras[0].data_length);
+  //   return p + Number(v.cameras[0].data_length);
+  // }
+  // function reduceRemove(p,v) {
+  //   return p - Number(v.cameras[0].data_length);
+  // }
+  // function reduceInitial() {return 0}
+  //
+  // console.log(dateDimension.group().reduce(reduceAdd, reduceRemove, reduceInitial).all());
+  //console.log(dateGroupLength.top(Infinity));
 
 
   const linechart = dc
@@ -21,6 +33,7 @@ const barChartFunc = (divRef, dailies) => {
     .dimension(dateDimension)
     .group(dateGroupLength)
     .yAxisLabel("Length")
+    .elasticY(true)
     .renderHorizontalGridLines(true)
     .renderArea(true)
     .x(d3.scaleTime().domain(dateExt));
