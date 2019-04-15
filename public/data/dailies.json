@@ -934,5 +934,31 @@
     ],
     "data_length": "1.46",
     "data_length_unit": "TB"
+  },
+  {
+    "job_name": "psi_3",
+    "daily_date": "2019-02-01",
+    "daily_name": "20190130_D32",
+    "cameras": [
+      {
+        "camera_id": "A",
+        "data_length": "1460.00",
+        "data_length_unit": "GB",
+        "first_copy": 6268,
+        "second_copy": 6269,
+        "media_volume": "FACCAO2_01",
+        "media_duration": "3:10:47 h",
+        "backup_to_lto_status": 1,
+        "audio_sync_status": 1,
+        "copy_to_server_status": 1,
+        "generate_low_res_status": 1,
+        "generate_proxy_status": 1,
+        "lto_log_status": 1,
+        "hd_log_status": 1,
+        "check_hash_code_status": 1
+      }
+    ],
+    "data_length": "1.46",
+    "data_length_unit": "TB"
   }
 ]

@@ -42,7 +42,7 @@ const piePerMonthFunc = (divRef, dailies) => {
 
   const dateDimension = dailies.dimension(d => `${d.daily_date.getMonth()}-${d.daily_date.getFullYear()}`);
 
- console.log(dateDimension.group());
+console.log(dateDimension.group().all());
 
 
 
