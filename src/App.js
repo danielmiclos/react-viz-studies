@@ -3,7 +3,9 @@ import './App.css';
 import { SelectJob } from "./components/selectJob";
 import { DataContext } from "./components/dcContext";
 import { TableJobs } from "./components/TableJobs";
-import { BarChartJobs } from "./components/BarChartJobs";
+import { LineChartJobs } from "./components/LineChartJobs";
+import { BarChartJobs } from "./components/BarChartVol";
+import { PiePerMonth } from "./components/PiePerMonth";
 
 
 class App extends Component {
@@ -13,7 +15,9 @@ class App extends Component {
       <div className="App">
         <DataContext>
           <SelectJob/>
+          <LineChartJobs/>
           <BarChartJobs/>
+          <PiePerMonth/>
           <TableJobs/>
         </DataContext>
       </div>
