@@ -8,10 +8,10 @@ const tableJobsFunc = (divRef, dailies) => {
   const dateParse = d3.timeFormat("%d/%m/%Y");
 
   const tableJobs = dc.dataTable(divRef)
-                      .width(800)
+                      .width(1200)
                       .height(600)
                       .dimension(dateDimension)
-                      .showGroups(false)
+                      .showSections(false)
                       .group(d => d.daily_date)
                       .columns(['job_name', {
                         label: 'daily_date',

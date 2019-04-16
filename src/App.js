@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { SelectJob } from "./components/selectJob";
 import { DataContext } from "./components/dcContext";
 import { TableJobs } from "./components/TableJobs";
 import { LineChartJobs } from "./components/LineChartJobs";
 import { BarChartJobs } from "./components/BarChartVol";
 import { PiePerMonth } from "./components/PiePerMonth";
+import TableDailies from "./components/TableDailies";
+import { Sandbox } from "./components/Sandbox";
 
 
 class App extends Component {
@@ -17,7 +19,8 @@ class App extends Component {
           <SelectJob/>
           <LineChartJobs/>
           <BarChartJobs/>
-          <PiePerMonth/>
+          <div id="dailies">
+          </div>
           <TableJobs/>
         </DataContext>
       </div>

@@ -42,21 +42,24 @@ const lineChartFunc = (divRef, dailies) => {
 
   const linechart = dc
     .lineChart(divRef)
-    .width(800)
+    .width(1200)
     .height(350)
     .margins({ top: 10, bottom: 50, right: 30, left: 50 })
+    .renderDataPoints(true, {radius: 2, fillOpacity: 0.8, strokeOpacity: 0.0, show:true})
+    .curve(d3.curveBasis)
     .dimension(dateDimension)
     .group(dateGroupLength)
     .yAxisLabel("Length")
     .elasticY(true)
     .renderHorizontalGridLines(true)
     .renderArea(true)
-    .x(d3.scaleTime().domain(dateExt));
+    .x(d3.scaleTime().domain(dateExt))
+    ;
 
   return linechart;
 
 };
 
 export const LineChartJobs = (props) => (
-  <ChartTemplate title="Lenght by day" chartFunction={lineChartFunc} />
+  <ChartTemplate title="Length by day" chartFunction={lineChartFunc} />
 );
