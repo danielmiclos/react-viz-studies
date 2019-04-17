@@ -11,6 +11,8 @@ const backupStatusPieFunc = (divRef, dalies) => {
 
   const statusDimension = dalies.dimension(d => d.Backup);
   const statusGroup = statusDimension.group();
+  const all = dalies.groupAll();
+  const sumTotal = all.reduceSum(d => 1).value();
 
   print_filter(statusGroup);
 
@@ -19,6 +21,8 @@ const backupStatusPieFunc = (divRef, dalies) => {
     .height(200)
     .dimension(statusDimension)
     .group(statusGroup)
+    .title(d => `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
+    .label(d =>  `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
 
   return backupStatus;
 };

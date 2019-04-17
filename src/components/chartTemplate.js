@@ -15,11 +15,12 @@ export const ChartTemplate = (props) => {
 
   return (
     <div ref={div}>
+      <h2>{props.title}</h2>
       <span onClick={() => {
           chart.filterAll();
           dc.redrawAll();
-        }}>reset</span>
-      <label>{props.title}</label>
+        }} className="reset">reset</span>
+
     </div>
   )
 

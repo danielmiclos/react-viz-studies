@@ -9,18 +9,23 @@ const diariasBarsFunc = (divRef, dailies) => {
   const diariasBarChart = dc.barChart(divRef);
 
   const diariaDimension = dailies.dimension(d => d.Diaria);
+  const dateDimension = dailies.dimension(d => d.ChegadaHD);
+  const dateExt = d3.extent(dateDimension.top(Infinity), d => d.ChegadaHD);
   const group = diariaDimension.group().reduceSum(d => d.Quantidade);
 
   //print_filter(group);
   //console.log(group.top(Infinity).length);
 
   diariasBarChart
-    .width(1800)
+    .width(1400)
     .height(300)
-    .margins({top:20, bottom:50, left:20, right:10})
+    .margins({top:20, bottom:50, left:60, right:10})
     .dimension(diariaDimension)
     .group(group)
+    .alwaysUseRounding(true)
+    .brush(true)
     .x(d3.scaleBand().domain(group.all().map(d => d.key)))
+    //.x(d3.scaleLinear().domain())
     .title(d => `${d.key}: ${d.value}GB`)
     //.label(d => 'nada')
     .centerBar(false)

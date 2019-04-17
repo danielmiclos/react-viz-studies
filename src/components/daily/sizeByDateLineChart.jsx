@@ -27,19 +27,23 @@ const sizeByDateFunc = (divRef, dailies) => {
   //print_filter(dateGroupLength);
 
   sizeByDate
-    .width(1800)
-    .height(200)
+    .width(1400)
+    .height(250)
+    .margins({top:20, bottom:50, left:60, right:10})
     .renderDataPoints(true)
     .dimension(dateDimension)
     .group(accumulate_group(dateGroupLength))
     .renderHorizontalGridLines(true)
-    .yAxisLabel("Tamanho")
+    .yAxisLabel("Tamanho (em Teras)")
     .elasticY(true)
     .renderHorizontalGridLines(true)
     .renderArea(true)
+    .dotRadius(5)
     .brushOn(false)
     .title(d => `${dateParse(d.key)}: ${Math.round(d.value)}GB`)
-    .x(d3.scaleTime().domain(dateExt))
+    .x(d3.scaleTime().domain(dateExt));
+
+  sizeByDate.yAxis().ticks(5);
 
 
   return sizeByDate;
