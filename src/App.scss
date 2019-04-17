@@ -104,6 +104,11 @@ table tr td {
 /* end table */
 
 
+.y-axis-label.y-label {
+  color:#FFFFFF;
+  fill:#FFFFFF;
+}
+
 .graphs {
   display: grid;
   grid-template-rows: 400px 350px auto;
@@ -144,6 +149,15 @@ table tr td {
 .sizebydate {
   grid-row: 2;
   grid-column: 1 / span 2;
+
+  .dc-chart path.line {
+    stroke-width: 3px;
+  }
+
+  .dot {
+    stroke-width: 3px !important;
+    stroke-opacity: 0.5 !important;
+  }
 }
 
 .minidata {

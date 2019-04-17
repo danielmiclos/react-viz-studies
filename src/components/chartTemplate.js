@@ -16,10 +16,10 @@ export const ChartTemplate = (props) => {
   return (
     <div ref={div}>
       <h2>{props.title}</h2>
-      <span onClick={() => {
+      <span style={{display: 'none'}} onClick={() => {
           chart.filterAll();
           dc.redrawAll();
-        }} className="reset">reset</span>
+        }} className="reset filter">reset</span>
 
     </div>
   )

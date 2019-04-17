@@ -40,7 +40,7 @@ const sizeByDateFunc = (divRef, dailies) => {
     .renderArea(true)
     .dotRadius(5)
     .brushOn(false)
-    .title(d => `${dateParse(d.key)}: ${Math.round(d.value)}GB`)
+    .title(d => `${dateParse(d.key)}: ${(d.value / 1000).toFixed(2)}T`)
     .x(d3.scaleTime().domain(dateExt));
 
   sizeByDate.yAxis().ticks(5);
