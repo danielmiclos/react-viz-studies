@@ -29,7 +29,7 @@ const barChartFunc = (divRef, dailies) => {
 
   const barchart = dc
     .barChart(divRef)
-    .width(800)
+    .width(1200)
     .height(200)
     .margins({ top: 10, bottom: 50, right: 30, left: 50 })
     .dimension(dateDimension)

@@ -30,6 +30,7 @@ export class DataContext extends React.Component{
         data.forEach(d => {
           d.daily_date = dateFormatParser(d.daily_date);
           d.daily_month = d3.timeMonth(d.daily_date);
+          d.data_length = d.data_length_unit === "TB" ? d.data_length * 1000 : d.data_length;
         });
 
         console.log("sucess");

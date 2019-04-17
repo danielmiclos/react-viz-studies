@@ -45,15 +45,16 @@ const lineChartFunc = (divRef, dailies) => {
     .width(1200)
     .height(350)
     .margins({ top: 10, bottom: 50, right: 30, left: 50 })
-    .renderDataPoints(true, {radius: 2, fillOpacity: 0.8, strokeOpacity: 0.0, show:true})
+      .renderDataPoints(true)
     .curve(d3.curveBasis)
     .dimension(dateDimension)
     .group(dateGroupLength)
     .yAxisLabel("Length")
-    .elasticY(true)
-    .renderHorizontalGridLines(true)
-    .renderArea(true)
+    .elasticY(false)
+    .renderHorizontalGridLines(false)
+    .renderArea(false)
     .x(d3.scaleTime().domain(dateExt))
+    // //.x(d3.scaleLinear().domain(d3.extent(dateGroupLength, d => )))
     ;
 
   return linechart;

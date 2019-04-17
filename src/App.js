@@ -21,7 +21,9 @@ class App extends Component {
           <BarChartJobs/>
           <div id="dailies">
           </div>
+          <table>
           <TableJobs/>
+          </table>
         </DataContext>
       </div>
     );

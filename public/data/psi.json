@@ -1,0 +1,882 @@
+[
+  {
+    "ChegadaHD": "2018/5/22",
+    "Diaria": "TESTE_20180522",
+    "NomeHDExterno": "A002C9QY",
+    "Quantidade": 362.79,
+    "PercentoDoTotal": "0.5%",
+    "LTO-1via": 5681,
+    "LTO-2via": 5682,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/6",
+    "Diaria": "S04_TESTE_20180605",
+    "NomeHDExterno": "Untitled",
+    "Quantidade": 11.16,
+    "PercentoDoTotal": "0.0%",
+    "LTO-1via": 5681,
+    "LTO-2via": 5682,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/6",
+    "Diaria": "S04_TESTE_20180606",
+    "NomeHDExterno": "02CINE0007",
+    "Quantidade": 228.43,
+    "PercentoDoTotal": "0.3%",
+    "LTO-1via": 5681,
+    "LTO-2via": 5682,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/8",
+    "Diaria": "S04_TESTE_201806006_2 S04_TESTE_20180608",
+    "NomeHDExterno": "o2CINE0002",
+    "Quantidade": 509.93,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5681,
+    "LTO-2via": 5682,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/11",
+    "Diaria": "D01_20180610",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 448.95,
+    "PercentoDoTotal": "0.6%",
+    "LTO-1via": 5681,
+    "LTO-2via": 5682,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/11",
+    "Diaria": "D02_20180611",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 655.09,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5681,
+    "LTO-2via": 5682,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/12",
+    "Diaria": "D03_20180612",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 872.16,
+    "PercentoDoTotal": "1.2%",
+    "LTO-1via": 5714,
+    "LTO-2via": 5715,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/13",
+    "Diaria": "D04_20180613",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 1100,
+    "PercentoDoTotal": "1.5%",
+    "LTO-1via": 5714,
+    "LTO-2via": 5715,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/14",
+    "Diaria": "D05_20180614",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 1910,
+    "PercentoDoTotal": "2.6%",
+    "LTO-1via": 5718,
+    "LTO-2via": 5719,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/15",
+    "Diaria": "D06_20180615",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 937.72,
+    "PercentoDoTotal": "1.3%",
+    "LTO-1via": 5721,
+    "LTO-2via": 5722,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/18",
+    "Diaria": "D07_20180618",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 607.9,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5721,
+    "LTO-2via": 5722,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/19",
+    "Diaria": "D08_20180619",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 704.9,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5721,
+    "LTO-2via": 5722,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/22",
+    "Diaria": "D09_20180620",
+    "NomeHDExterno": "O2CINE002",
+    "Quantidade": 349.62,
+    "PercentoDoTotal": "0.5%",
+    "LTO-1via": 5743,
+    "LTO-2via": 5744,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/22",
+    "Diaria": "D10_20180621",
+    "NomeHDExterno": "O2CINE002",
+    "Quantidade": 468.17,
+    "PercentoDoTotal": "0.6%",
+    "LTO-1via": 5743,
+    "LTO-2via": 5744,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/24",
+    "Diaria": "D11_20180624",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 440.36,
+    "PercentoDoTotal": "0.6%",
+    "LTO-1via": 5743,
+    "LTO-2via": 5744,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/26",
+    "Diaria": "D12_20180625",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 531.4,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5743,
+    "LTO-2via": 5744,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/27",
+    "Diaria": "D13_20180626",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 343.56,
+    "PercentoDoTotal": "0.5%",
+    "LTO-1via": 5743,
+    "LTO-2via": 5744,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/28",
+    "Diaria": "D14_20180627",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 497.69,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5764,
+    "LTO-2via": 5765,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/6/29",
+    "Diaria": "D15_20180628",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 758.94,
+    "PercentoDoTotal": "1.0%",
+    "LTO-1via": 5764,
+    "LTO-2via": 5765,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/1",
+    "Diaria": "D16_20180629",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 509,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5764,
+    "LTO-2via": 5765,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/2",
+    "Diaria": "D17_20180702",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 603.1,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5774,
+    "LTO-2via": 5775,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/3",
+    "Diaria": "D18_20180703",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 678.76,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5774,
+    "LTO-2via": 5775,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/4",
+    "Diaria": "D19_20180704",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 814.21,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 5774,
+    "LTO-2via": 5775,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/5",
+    "Diaria": "D20_20180705",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 640.61,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5783,
+    "LTO-2via": 5784,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/6",
+    "Diaria": "D21_20180706",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 564.97,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5783,
+    "LTO-2via": 5784,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/10",
+    "Diaria": "D22_20180709",
+    "NomeHDExterno": "O2CINE006",
+    "Quantidade": 796.85,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 5783,
+    "LTO-2via": 5784,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/11",
+    "Diaria": "D23_20180710",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 1170,
+    "PercentoDoTotal": "1.6%",
+    "LTO-1via": 5799,
+    "LTO-2via": 5800,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/12",
+    "Diaria": "D24_20180711",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 1111,
+    "PercentoDoTotal": "1.5%",
+    "LTO-1via": 5799,
+    "LTO-2via": 5800,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/13",
+    "Diaria": "D25_20180712",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 1050,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 5803,
+    "LTO-2via": 5804,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/14",
+    "Diaria": "D26_20180713",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 787.65,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 5803,
+    "LTO-2via": 5804,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/17",
+    "Diaria": "D27_20180716",
+    "NomeHDExterno": "O2CINE0008 / 01_EDMUNDO",
+    "Quantidade": 1100,
+    "PercentoDoTotal": "1.5%",
+    "LTO-1via": 5813,
+    "LTO-2via": 5814,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/18",
+    "Diaria": "D28_20180717",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 1180,
+    "PercentoDoTotal": "1.6%",
+    "LTO-1via": 5813,
+    "LTO-2via": 5814,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/19",
+    "Diaria": "D29_20180718",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 1010,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 5820,
+    "LTO-2via": 5821,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/20",
+    "Diaria": "D30_20180719",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 859.36,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 5820,
+    "LTO-2via": 5821,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/21",
+    "Diaria": "D31_20180720",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 1250,
+    "PercentoDoTotal": "1.7%",
+    "LTO-1via": 5822,
+    "LTO-2via": 5823,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/24",
+    "Diaria": "D32_20180723",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 1110,
+    "PercentoDoTotal": "1.5%",
+    "LTO-1via": 5822,
+    "LTO-2via": 5823,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/24",
+    "Diaria": "D33_20180724",
+    "NomeHDExterno": "O2CINE002 / 01_EDMUNDO",
+    "Quantidade": 1300,
+    "PercentoDoTotal": "1.7%",
+    "LTO-1via": 5839,
+    "LTO-2via": 5840,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/25",
+    "Diaria": "D34_20180725",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 790.08,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 5839,
+    "LTO-2via": 5840,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/26",
+    "Diaria": "D35_20180726",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 1780,
+    "PercentoDoTotal": "2.4%",
+    "LTO-1via": 5855,
+    "LTO-2via": 5856,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/29",
+    "Diaria": "D36_20180727",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 1295.48,
+    "PercentoDoTotal": "1.7%",
+    "LTO-1via": 5869,
+    "LTO-2via": 5870,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/7/30",
+    "Diaria": "D37_20180730",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 897.64,
+    "PercentoDoTotal": "1.2%",
+    "LTO-1via": 5869,
+    "LTO-2via": 5870,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/1",
+    "Diaria": "D38_20180731",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 488.84,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5880,
+    "LTO-2via": 5881,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/3",
+    "Diaria": "D39_20180801",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 634.11,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5890,
+    "LTO-2via": 5891,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/3",
+    "Diaria": "D40_20180802",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 1260.43,
+    "PercentoDoTotal": "1.7%",
+    "LTO-1via": 5890,
+    "LTO-2via": 5891,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/6",
+    "Diaria": "D41_20180805",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 1007,
+    "PercentoDoTotal": "1.3%",
+    "LTO-1via": 5880,
+    "LTO-2via": 5881,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/6",
+    "Diaria": "D42_20180806",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 1120,
+    "PercentoDoTotal": "1.5%",
+    "LTO-1via": 5898,
+    "LTO-2via": 5899,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/7",
+    "Diaria": "D43_20180807",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 819.14,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 5898,
+    "LTO-2via": 5899,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/9",
+    "Diaria": "D44_20180808",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 676.1,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5880,
+    "LTO-2via": 5881,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/10",
+    "Diaria": "D45_20180809",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 1030,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 5908,
+    "LTO-2via": 5909,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/13",
+    "Diaria": "D46_20180812",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 595.44,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5908,
+    "LTO-2via": 5909,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/14",
+    "Diaria": "D47_20180813",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 1190,
+    "PercentoDoTotal": "1.6%",
+    "LTO-1via": 5924,
+    "LTO-2via": 5925,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/15",
+    "Diaria": "D48_20180814",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 782.69,
+    "PercentoDoTotal": "1.0%",
+    "LTO-1via": 5924,
+    "LTO-2via": 5925,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/16",
+    "Diaria": "D49_20180815",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 1030,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 5926,
+    "LTO-2via": 5927,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/17",
+    "Diaria": "D50_20180816",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 556.04,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5926,
+    "LTO-2via": 5927,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/20",
+    "Diaria": "D51_20180819",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 573.8,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5939,
+    "LTO-2via": 5940,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/21",
+    "Diaria": "D52_20180820",
+    "NomeHDExterno": "HD_04_MESA",
+    "Quantidade": 1260,
+    "PercentoDoTotal": "1.7%",
+    "LTO-1via": 5947,
+    "LTO-2via": 5948,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/22",
+    "Diaria": "D53_20180821",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 1010,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 5955,
+    "LTO-2via": 5956,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/23",
+    "Diaria": "D54_20180822",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 1070,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 5955,
+    "LTO-2via": 5956,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/26",
+    "Diaria": "D55_20180825",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 540.97,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 5965,
+    "LTO-2via": 5966,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/26",
+    "Diaria": "D56_20180826",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 686.26,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5947,
+    "LTO-2via": 5948,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/28",
+    "Diaria": "D57_20180827",
+    "NomeHDExterno": "02CINE0002",
+    "Quantidade": 661.55,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5908,
+    "LTO-2via": 5909,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/30",
+    "Diaria": "D58_20180828",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 1000,
+    "PercentoDoTotal": "1.3%",
+    "LTO-1via": 5975,
+    "LTO-2via": 5976,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/8/30",
+    "Diaria": "D59_20180829",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 625.26,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 5975,
+    "LTO-2via": 5966,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/3",
+    "Diaria": "D60_20180830",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 1400,
+    "PercentoDoTotal": "1.9%",
+    "LTO-1via": 5985,
+    "LTO-2via": 5986,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/3",
+    "Diaria": "D61_20180902",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 669.24,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 5985,
+    "LTO-2via": 5986,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/4",
+    "Diaria": "D62_20180903",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 1000,
+    "PercentoDoTotal": "1.3%",
+    "LTO-1via": 5995,
+    "LTO-2via": 5996,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/5",
+    "Diaria": "D63_20180904",
+    "NomeHDExterno": "HD_04_MESA",
+    "Quantidade": 771.53,
+    "PercentoDoTotal": "1.0%",
+    "LTO-1via": 6011,
+    "LTO-2via": 6012,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/6",
+    "Diaria": "D64_20180905",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 904.31,
+    "PercentoDoTotal": "1.2%",
+    "LTO-1via": 6013,
+    "LTO-2via": 6014,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/9",
+    "Diaria": "D65_20180908",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 900.09,
+    "PercentoDoTotal": "1.2%",
+    "LTO-1via": 6013,
+    "LTO-2via": 6014,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/10",
+    "Diaria": "D66_20180909",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 541.33,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 6017,
+    "LTO-2via": 6018,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/11",
+    "Diaria": "D67_20180910",
+    "NomeHDExterno": "O2CINE0002",
+    "Quantidade": 689.51,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 6011,
+    "LTO-2via": 6012,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/12",
+    "Diaria": "D68_20180911",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 1000,
+    "PercentoDoTotal": "1.3%",
+    "LTO-1via": 6027,
+    "LTO-2via": 6028,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/13",
+    "Diaria": "D69_20180912",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 1400,
+    "PercentoDoTotal": "1.9%",
+    "LTO-1via": 5827,
+    "LTO-2via": 6026,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/14",
+    "Diaria": "D70_20180913",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 711.39,
+    "PercentoDoTotal": "1.0%",
+    "LTO-1via": 6029,
+    "LTO-2via": 6030,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/17",
+    "Diaria": "D71_20180916",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 691.84,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 6048,
+    "LTO-2via": 6049,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/18",
+    "Diaria": "D72_20180917",
+    "NomeHDExterno": "02CINE0002",
+    "Quantidade": 903.36,
+    "PercentoDoTotal": "1.2%",
+    "LTO-1via": 6033,
+    "LTO-2via": 6034,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/19",
+    "Diaria": "D73_20180918",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 1600,
+    "PercentoDoTotal": "2.1%",
+    "LTO-1via": 6054,
+    "LTO-2via": 6055,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/20",
+    "Diaria": "D74_20180919",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 1000,
+    "PercentoDoTotal": "1.3%",
+    "LTO-1via": 6033,
+    "LTO-2via": 6034,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/23",
+    "Diaria": "D75_20180922",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 669.13,
+    "PercentoDoTotal": "0.9%",
+    "LTO-1via": 6048,
+    "LTO-2via": 6049,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/24",
+    "Diaria": "D76_20180923",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 602.51,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 6054,
+    "LTO-2via": 6055,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/24",
+    "Diaria": "D77_20180924",
+    "NomeHDExterno": "O2CINE0006",
+    "Quantidade": 509.4,
+    "PercentoDoTotal": "0.7%",
+    "LTO-1via": 6060,
+    "LTO-2via": 6061,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/9/26",
+    "Diaria": "D78_20180925",
+    "NomeHDExterno": "02CINE0002",
+    "Quantidade": 1180,
+    "PercentoDoTotal": "1.6%",
+    "LTO-1via": 6066,
+    "LTO-2via": 6067,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/10/1",
+    "Diaria": "D79_20180928",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 866.7,
+    "PercentoDoTotal": "1.2%",
+    "LTO-1via": 6110,
+    "LTO-2via": 6111,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/10/1",
+    "Diaria": "D80_20180929",
+    "NomeHDExterno": "O2CINE0008",
+    "Quantidade": 1410,
+    "PercentoDoTotal": "1.9%",
+    "LTO-1via": 6110,
+    "LTO-2via": 6111,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/10/3",
+    "Diaria": "D81_20180930",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 834.02,
+    "PercentoDoTotal": "1.1%",
+    "LTO-1via": 6076,
+    "LTO-2via": 6077,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/10/3",
+    "Diaria": "D82_20181001",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 604.07,
+    "PercentoDoTotal": "0.8%",
+    "LTO-1via": 6066,
+    "LTO-2via": 6067,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/10/3",
+    "Diaria": "D83_20181002",
+    "NomeHDExterno": "O2CINE0004",
+    "Quantidade": 1030,
+    "PercentoDoTotal": "1.4%",
+    "LTO-1via": 6086,
+    "LTO-2via": 6087,
+    "Backup": "OK"
+  },
+  {
+    "ChegadaHD": "2018/10/4",
+    "Diaria": "D84_20181003",
+    "NomeHDExterno": "O2CINE0005",
+    "Quantidade": 1200,
+    "PercentoDoTotal": "1.6%",
+    "LTO-1via": 6080,
+    "LTO-2via": 6081,
+    "Backup": "OK"
+  }
+]
