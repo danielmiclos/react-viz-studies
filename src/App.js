@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { SelectJob } from "./components/selectJob";
 import { DataContext } from "./components/dcContext";
-import { TableJobs } from "./components/TableJobs";
-import { LineChartJobs } from "./components/LineChartJobs";
-import { BarChartJobs } from "./components/BarChartVol";
-import { PiePerMonth } from "./components/PiePerMonth";
-import TableDailies from "./components/TableDailies";
-import { Sandbox } from "./components/Sandbox";
+import { DiariasBars } from './components/daily/diariasBars';
+import { SizeByDate } from './components/daily/sizeByDateLineChart';
+import { NumberTotalDisplay } from './components/daily/numberTotalDisplay';
+import { BackupStatusPie } from './components/daily/backupStatusPie';
+
 
 
 class App extends Component {
@@ -16,14 +14,10 @@ class App extends Component {
     return (
       <div className="App">
         <DataContext>
-          <SelectJob/>
-          <LineChartJobs/>
-          <BarChartJobs/>
-          <div id="dailies">
-          </div>
-          <table>
-          <TableJobs/>
-          </table>
+          <DiariasBars/>
+          <SizeByDate/>
+          <NumberTotalDisplay/>
+          <BackupStatusPie/>
         </DataContext>
       </div>
     );

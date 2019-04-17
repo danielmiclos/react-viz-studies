@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 import 'dc/dc.css';
 
 export const dcContext = React.createContext("dcContext");
-export const dateFormaterSpecifier = "%Y-%m-%d";
+export const dateFormaterSpecifier = "%Y/%m/%d";
 export const dateFormat = d3.timeFormat(dateFormaterSpecifier);
 export const dateFormatParser = d3.timeParse(dateFormaterSpecifier);
 export const numberFormat = d3.format('.2f');
@@ -24,13 +24,12 @@ export class DataContext extends React.Component{
     }
 
     this.setState({loading: true});
-    fetch('./data/dailies.json')
+    fetch('./data/psi.json')
       .then(res => res.json())
       .then((data) => {
         data.forEach(d => {
-          d.daily_date = dateFormatParser(d.daily_date);
-          d.daily_month = d3.timeMonth(d.daily_date);
-          d.data_length = d.data_length_unit === "TB" ? d.data_length * 1000 : d.data_length;
+          d.ChegadaHD = dateFormatParser(d.ChegadaHD);
+          d.daily_month = d3.timeMonth(d.ChegadaHD);
         });
 
         console.log("sucess");

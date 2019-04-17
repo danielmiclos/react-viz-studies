@@ -37,7 +37,7 @@
     "PercentoDoTotal": "0.7%",
     "LTO-1via": 5681,
     "LTO-2via": 5682,
-    "Backup": "OK"
+    "Backup": "NO"
   },
   {
     "ChegadaHD": "2018/6/11",
@@ -137,7 +137,7 @@
     "PercentoDoTotal": "0.6%",
     "LTO-1via": 5743,
     "LTO-2via": 5744,
-    "Backup": "OK"
+    "Backup": "NO"
   },
   {
     "ChegadaHD": "2018/6/24",
@@ -187,7 +187,7 @@
     "PercentoDoTotal": "1.0%",
     "LTO-1via": 5764,
     "LTO-2via": 5765,
-    "Backup": "OK"
+    "Backup": "NO"
   },
   {
     "ChegadaHD": "2018/7/1",
