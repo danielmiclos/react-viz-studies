@@ -18,7 +18,7 @@ const diariasBarsFunc = (divRef, dailies) => {
 
   diariasBarChart
     .width(1400)
-    .height(300)
+    .height(250)
     .margins({top:20, bottom:50, left:60, right:10})
     .dimension(diariaDimension)
     .group(group)

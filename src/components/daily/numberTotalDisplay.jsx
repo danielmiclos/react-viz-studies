@@ -13,7 +13,14 @@ const numberTotalDisplayFunc = (divRef, dailies) => {
 
 
 
-  numberTotal.group(sumTotal).valueAccessor(d => d);
+  numberTotal.group(sumTotal)
+             .valueAccessor(d => d)
+    .formatNumber(d3.format('.3d'))
+    .html({
+      one: '%number Gb',
+      some: '%number Gbs',
+      none: '0'
+    });
 
 
 

@@ -19,7 +19,7 @@ export const ChartTemplate = (props) => {
       <span style={{display: 'none'}} onClick={() => {
           chart.filterAll();
           dc.redrawAll();
-        }} className="reset filter">reset</span>
+        }} className="reset">reset</span>
 
     </div>
   )

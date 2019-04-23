@@ -6,6 +6,8 @@ import { SizeByDate } from './components/daily/sizeByDateLineChart';
 import { NumberTotalDisplay } from './components/daily/numberTotalDisplay';
 import { BackupStatusPie } from './components/daily/backupStatusPie';
 import {TableDiaria} from "./components/daily/tableDiarias";
+import { LineChartJobs } from "./components/LineChartJobs";
+import { ComposedDailyData } from "./components/daily/ComposedDailyData";
 
 
 class App extends Component {
@@ -13,7 +15,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Dashboard</h1>
         <DataContext>
           <div className="graphs">
             <div className="diariasbars">
@@ -24,6 +25,12 @@ class App extends Component {
             <div className="sizebydate">
               <div className="graph">
               <SizeByDate/>
+              </div>
+            </div>
+
+            <div className="databydate">
+              <div className="graph">
+                <LineChartJobs/>
               </div>
             </div>
             <div className="minidata">
@@ -45,6 +52,12 @@ class App extends Component {
             </div>
 
           </div>
+
+          <div className="sizebydate">
+            <div className="graph">
+            </div>
+          </div>
+
         </DataContext>
       </div>
     );
