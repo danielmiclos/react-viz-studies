@@ -21,24 +21,19 @@ const composedChartFunc = (divRef, dailies) => {
   const composedChart = dc.compositeChart(divRef);
 
   const sizeByDate = dc.lineChart(composedChart);
-  const linechart = dc.lineChart(composedChart);
-
-  const dateParse = d3.timeFormat("%d/%m/%Y");
+  const linechart = dc.barChart(composedChart);
   const dateDimension = dailies.dimension(d => d.ChegadaHD);
   const dateExt = d3.extent(dateDimension.top(Infinity), d => d.ChegadaHD);
   const dateGroupLength = dateDimension.group().reduceSum(d => d.Quantidade);
 
   const accumulatedGroup = accumulate_group(dateGroupLength);
 
-  composedChart
-    .margins({top:20, bottom:50, left:60, right:10})
-    .width(1400)
-    .height(250);
+
 
   sizeByDate
     //.renderDataPoints(true)
-    .dimension(dateDimension)
-    .group(accumulatedGroup)
+    //.dimension(dateDimension)
+    .group(accumulatedGroup, 'grupob')
     //.renderHorizontalGridLines(true)
     //.yAxisLabel("Tamanho (em Teras)")
     //.elasticY(true)
@@ -51,14 +46,23 @@ const composedChartFunc = (divRef, dailies) => {
     //.renderDataPoints(true)
     //.curve(d3.curveBasis)
     .dimension(dateDimension)
-    .group(dateGroupLength)
+    .group(dateGroupLength, 'grupo a')
     //.yAxisLabel("Length")
-    //.elasticY(false)
+    .elasticY(true)
+    .useRightYAxis(true)
+    .colors(d3.scaleOrdinal().range(d3.schemeSet2))
     //.renderHorizontalGridLines(false)
     //.renderArea(false)
   ;
 
-  composedChart.compose([sizeByDate, linechart]);
+  composedChart
+    .margins({top:20, bottom:50, left:60, right:50})
+    .width(1400)
+    .height(250)
+    .dimension(dateDimension)
+    .colors(d3.scaleOrdinal().range(d3.schemeSet2))
+    .x(d3.scaleTime().domain(dateExt))
+    .compose([sizeByDate, linechart]);
 
 
   return composedChart;

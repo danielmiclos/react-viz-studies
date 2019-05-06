@@ -55,6 +55,7 @@ class App extends Component {
 
           <div className="sizebydate">
             <div className="graph">
+              <ComposedDailyData />
             </div>
           </div>
 
