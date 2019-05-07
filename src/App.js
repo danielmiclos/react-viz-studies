@@ -16,6 +16,24 @@ class App extends Component {
     return (
       <div className="App">
         <DataContext>
+          <header>
+            <div>
+              <h4>Project Name:</h4>
+              <h2>PSI 4</h2>
+            </div>
+            <div>
+              <h4>Job ID:</h4>
+              <h2>J_POS_0000538</h2>
+            </div>
+            <div>
+              <h4>Start Date:</h4>
+              <h2>2018-05-15</h2>
+            </div>
+            <div>
+              <h4>End Date:</h4>
+              <h2>2018-08-31</h2>
+            </div>
+          </header>
           <div className="graphs">
             <div className="diariasbars">
               <div className="graph">
