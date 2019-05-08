@@ -42,15 +42,15 @@ class App extends Component {
             </div>
             <div className="sizebydate">
               <div className="graph">
-              <SizeByDate/>
+                <ComposedDailyData />
               </div>
             </div>
 
-            <div className="databydate">
-              <div className="graph">
-                <LineChartJobs/>
-              </div>
-            </div>
+            {/*<div className="databydate">*/}
+            {/*  <div className="graph">*/}
+            {/*    <LineChartJobs/>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
             <div className="minidata">
               <div className="graph">
                 <div className="numberTotal">
@@ -71,11 +71,7 @@ class App extends Component {
 
           </div>
 
-          <div className="sizebydate">
-            <div className="graph">
-              <ComposedDailyData />
-            </div>
-          </div>
+
 
         </DataContext>
       </div>
