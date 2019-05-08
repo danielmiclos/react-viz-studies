@@ -189,6 +189,8 @@ table tr td {
   grid-row: 3;
   grid-column: 1 / span 3;
   width: 100%;
+  overflow:hidden;
+  overflow-y: auto;
 
   .dc-table {
     width: 100%;

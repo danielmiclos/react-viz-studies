@@ -8,7 +8,7 @@ const diariasBarsFunc = (divRef, dailies) => {
 
   const diariasBarChart = dc.barChart(divRef);
 
-  const diariaDimension = dailies.dimension(d => d.Diaria);
+  const diariaDimension = dailies.dimension(d => [d.Diaria, d.Backup]);
   const dateDimension = dailies.dimension(d => d.ChegadaHD);
   const dateExt = d3.extent(dateDimension.top(Infinity), d => d.ChegadaHD);
   const group = diariaDimension.group().reduceSum(d => d.Quantidade);
@@ -24,9 +24,13 @@ const diariasBarsFunc = (divRef, dailies) => {
     .group(group)
     .alwaysUseRounding(true)
     .brush(true)
+    .colorAccessor(d => d.key[1] === 'OK' ? 'blue' : 'orange')
+    //.colors(d3.scaleOrdinal().domain(["OK", "NO"]))
+    //.range(["blue", "orange"])
+    .ordinalColors(['rgb(31, 119, 180)','rgb(255, 127, 14)'])
     .x(d3.scaleBand().domain(group.all().map(d => d.key)))
     //.x(d3.scaleLinear().domain())
-    .title(d => `${d.key}: ${d.value}GB`)
+    .title(d => `${d.key[0]}: ${d.value}GB`)
     //.label(d => 'nada')
     .centerBar(false)
     .xUnits(dc.units.ordinal)

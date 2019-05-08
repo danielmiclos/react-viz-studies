@@ -21,6 +21,7 @@ const backupStatusPieFunc = (divRef, dalies) => {
     .height(200)
     .dimension(statusDimension)
     .group(statusGroup)
+    .ordinalColors(['rgb(31, 119, 180)','rgb(255, 127, 14)'])
     .title(d => `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
     .label(d =>  `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
 
