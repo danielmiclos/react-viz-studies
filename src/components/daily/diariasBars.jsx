@@ -20,7 +20,7 @@ const diariasBarsFunc = (divRef, dailies) => {
 
 
   diariasBarChart
-    .width(880)
+    .width(1000)
     .height(250)
     .margins({top:20, bottom:50, left:60, right:10})
     .dimension(diariaDimension)
@@ -40,32 +40,32 @@ const diariasBarsFunc = (divRef, dailies) => {
 
     .renderlet(function (chart) {
 
-      d3.select('svg')
-        .append('defs')
-        .append("linearGradient")
+      const barBG = d3.select(divRef)
+                      .select('svg')
+                      .append('defs')
+                      .append("linearGradient");
+
+
+      barBG
         .attr("id", "barBg")
         .attr("x1", "0")
         .attr("x2", "0")
-        .attr("y1", "1")
-        .attr("y2", "0");
+        .attr("y1", "200")
+        .attr("y2", "00")
+        .attr("gradientUnits", "userSpaceOnUse");
 
-      d3.select(' linearGradient')
+      barBG
         .append("stop")
         .attr("offset", "0%")
         .attr("stop-color", "rgb(31, 119, 180)")
-        .attr("stop-opacity", "0");
+        .attr("stop-opacity", "0.1");
 
-      // d3.select(' linearGradient')
-      //   .append("stop")
-      //   .attr("offset", "50%")
-      //   .attr("stop-color", "blue")
-      //   .attr("stop-opacity", "1");
 
-      d3.select(' linearGradient')
+      barBG
         .append("stop")
-        .attr("offset", "110%")
+        .attr("offset", "100%")
         .attr("stop-color", "rgb(31, 119, 180)")
-        .attr("stop-opacity", "0.8");
+        .attr("stop-opacity", "1");
 
       chart.selectAll("g.x text")
         .attr('dx', '30')

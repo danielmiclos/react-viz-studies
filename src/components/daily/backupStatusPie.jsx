@@ -17,35 +17,41 @@ const backupStatusPieFunc = (divRef, dalies) => {
   print_filter(statusGroup);
 
   backupStatus
-    .width(250)
-    .height(250)
-    .radius(90)
-    .innerRadius(60)
+    .width(150)
+    .height(150)
+    .radius(40)
+    .innerRadius(30)
     .dimension(statusDimension)
     .group(statusGroup)
-    .externalLabels(30)
-    .ordinalColors(['url(#barBg)','rgb(255, 127, 14)'])
+    .externalLabels(-35)
+    .ordinalColors(['url(#pieBg)','rgb(255, 127, 14)'])
     .title(d => `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
     .label(d =>  `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
     .renderlet(function(chart){
 
-      d3.select('svg')
-        .append('defs')
-        .append("linearGradient")
-        .attr("id", "barBg")
+      chart.select('.dc-chart .pie-slice.external')
+        .attr('fill', 'white');
+
+      const pieBG = d3.select(divRef)
+                      .select('svg')
+                      .append('defs')
+                      .append("linearGradient");
+
+      pieBG
+        .attr("id", "pieBg")
         .attr("x1", "0")
         .attr("x2", "0")
         .attr("y1", "1")
         .attr("y2", "0");
 
-      d3.select(' linearGradient')
+      pieBG
         .append("stop")
         .attr("offset", "0%")
         .attr("stop-color", "rgb(31, 119, 180)")
-        .attr("stop-opacity", "0.1");
+        .attr("stop-opacity", "0.3");
 
 
-      d3.select(' linearGradient')
+      pieBG
         .append("stop")
         .attr("offset", "100%")
         .attr("stop-color", "rgb(31, 119, 180)")

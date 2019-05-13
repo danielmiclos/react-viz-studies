@@ -126,6 +126,10 @@ table tr td {
     top:0;
     right: 0;
   }
+
+  .pie-slice.external {
+    fill: #FFFFFF !important;
+  }
 }
  .graph {
   background:rgba(255,255,255,0.03);
