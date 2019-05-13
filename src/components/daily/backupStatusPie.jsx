@@ -24,9 +24,35 @@ const backupStatusPieFunc = (divRef, dalies) => {
     .dimension(statusDimension)
     .group(statusGroup)
     .externalLabels(30)
-    .ordinalColors(['rgb(31, 119, 180)','rgb(255, 127, 14)'])
+    .ordinalColors(['url(#barBg)','rgb(255, 127, 14)'])
     .title(d => `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
     .label(d =>  `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
+    .renderlet(function(chart){
+
+      d3.select('svg')
+        .append('defs')
+        .append("linearGradient")
+        .attr("id", "barBg")
+        .attr("x1", "0")
+        .attr("x2", "0")
+        .attr("y1", "1")
+        .attr("y2", "0");
+
+      d3.select(' linearGradient')
+        .append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "rgb(31, 119, 180)")
+        .attr("stop-opacity", "0.1");
+
+
+      d3.select(' linearGradient')
+        .append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "rgb(31, 119, 180)")
+        .attr("stop-opacity", "0.9");
+
+
+    });
 
   return backupStatus;
 };
