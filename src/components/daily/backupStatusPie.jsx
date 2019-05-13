@@ -17,10 +17,13 @@ const backupStatusPieFunc = (divRef, dalies) => {
   print_filter(statusGroup);
 
   backupStatus
-    .width(200)
-    .height(200)
+    .width(250)
+    .height(250)
+    .radius(90)
+    .innerRadius(60)
     .dimension(statusDimension)
     .group(statusGroup)
+    .externalLabels(30)
     .ordinalColors(['rgb(31, 119, 180)','rgb(255, 127, 14)'])
     .title(d => `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)
     .label(d =>  `${d.key}: ${Math.round((d.value / sumTotal) * 100)}%`)

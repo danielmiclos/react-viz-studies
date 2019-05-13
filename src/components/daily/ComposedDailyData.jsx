@@ -57,7 +57,7 @@ const composedChartFunc = (divRef, dailies) => {
 
   composedChart
     .margins({top:20, bottom:50, left:60, right:50})
-    .width(1400)
+    .width(880)
     .height(250)
     .dimension(dateDimension)
     .colors(d3.scaleOrdinal().range(d3.schemeSet2))

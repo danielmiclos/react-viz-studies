@@ -35,6 +35,7 @@ export class DataContext extends React.Component{
         console.log("sucess");
 
         this.dailies = crossfilter(data);
+        this.datum = data;
         this.setState({loading:false, hasDailies: true});
       }, (error) => console.log(error))
 
@@ -46,7 +47,7 @@ export class DataContext extends React.Component{
     }
 
     return (
-      <dcContext.Provider value={{dailies:this.dailies}}>
+      <dcContext.Provider value={{dailies:this.dailies, datum: this.datum}}>
         <div ref={this.parent}>
           {this.props.children}
         </div>

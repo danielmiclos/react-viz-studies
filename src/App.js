@@ -8,6 +8,7 @@ import { BackupStatusPie } from './components/daily/backupStatusPie';
 import {TableDiaria} from "./components/daily/tableDiarias";
 import { LineChartJobs } from "./components/LineChartJobs";
 import { ComposedDailyData } from "./components/daily/ComposedDailyData";
+import { PureD3test } from "./components/daily/PureD3test";
 
 
 class App extends Component {
@@ -53,6 +54,9 @@ class App extends Component {
             {/*</div>*/}
             <div className="minidata">
               <div className="graph">
+                <PureD3test title="Total Storage"/>
+              </div>
+              <div className="graph">
                 <div className="numberTotal">
                   <NumberTotalDisplay/>
                 </div>
@@ -71,7 +75,9 @@ class App extends Component {
 
           </div>
 
+          <div className="graph">
 
+          </div>
 
         </DataContext>
       </div>

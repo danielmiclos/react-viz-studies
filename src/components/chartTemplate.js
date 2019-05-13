@@ -6,6 +6,7 @@ export const ChartTemplate = (props) => {
   const context = React.useContext(dcContext);
   const [chart, updateChart] = React.useState(null);
   const dailies = context.dailies;
+  const datum = context.datum;
   const div = React.useRef(null);
   React.useEffect(() => {
     const newChart = props.chartFunction(div.current, dailies);
