@@ -32,17 +32,33 @@ const makeTable = (divRef, datum) => {
 
   const dateDimension = datum.dimension(d => d.ChegadaHD);
 
-  print_filter(dateDimension);
+ // print_filter(dateDimension);
 
   dailyTable
     .dimension(dateDimension)
     .showSections(false)
     .group(d => d.ChegadaHD)
     .size(100)
-    .columns(['Diaria', {
+    .columns(['daily_name', {
       label: 'ChegadaHD',
       format: d => dateParse(d.ChegadaHD),
-    }, 'NomeHDExterno', 'Quantidade', "LTO-1via", "LTO-2via", "Backup"])
+    },  {
+      label: 'Media Volume',
+      format: d => d.cameras[0].media_volume,
+    }, {
+      label: 'Quantidade',
+      format: d => d.cameras[0].data_length + 'GB'
+
+    }, {
+      label:"LTO-1via",
+      format: d => d.cameras[0].first_copy
+    }, {
+      label:"LTO-2via",
+      format: d => d.cameras[0].second_copy
+    }, {
+      label:"Backup",
+      format: d => d.cameras[0].backup_to_lto_status
+    }])
     .sortBy(d => d.ChegadaHD)
     .order(d3.ascending);
 

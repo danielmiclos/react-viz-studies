@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 import 'dc/dc.css';
 
 export const dcContext = React.createContext("dcContext");
-export const dateFormaterSpecifier = "%Y/%m/%d";
+export const dateFormaterSpecifier = "%Y-%m-%d";
 export const dateFormat = d3.timeFormat(dateFormaterSpecifier);
 export const dateFormatParser = d3.timeParse(dateFormaterSpecifier);
 export const numberFormat = d3.format('.2f');
@@ -24,20 +24,22 @@ export class DataContext extends React.Component{
     }
 
     this.setState({loading: true});
-    fetch('./data/psi.json')
+    fetch('./data/dailies2.json')
       .then(res => res.json())
       .then((data) => {
         data.forEach(d => {
-          d.ChegadaHD = dateFormatParser(d.ChegadaHD);
-          d.daily_month = d3.timeMonth(d.ChegadaHD);
+          d.ChegadaHD = dateFormatParser(d.daily_date);
+          d.daily_month = d3.timeMonth(d.daily_date);
         });
 
         console.log("sucess");
 
         this.dailies = crossfilter(data);
         this.datum = data;
+
+
         this.setState({loading:false, hasDailies: true});
-      }, (error) => console.log(error))
+      }, (error) => console.log("ERROR BURRÃO: ", error))
 
   }
 

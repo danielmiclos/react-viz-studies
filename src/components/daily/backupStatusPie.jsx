@@ -9,12 +9,12 @@ const backupStatusPieFunc = (divRef, dalies) => {
 
   const backupStatus = dc.pieChart(divRef);
 
-  const statusDimension = dalies.dimension(d => d.Backup);
+  const statusDimension = dalies.dimension(d => d.cameras[0].backup_to_lto_status);
   const statusGroup = statusDimension.group();
   const all = dalies.groupAll();
   const sumTotal = all.reduceSum(d => 1).value();
 
-  print_filter(statusGroup);
+ // print_filter(statusGroup);
 
   backupStatus
     .width(150)

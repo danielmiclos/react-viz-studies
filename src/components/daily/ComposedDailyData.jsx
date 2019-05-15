@@ -24,7 +24,7 @@ const composedChartFunc = (divRef, dailies) => {
   const linechart = dc.barChart(composedChart);
   const dateDimension = dailies.dimension(d => d.ChegadaHD);
   const dateExt = d3.extent(dateDimension.top(Infinity), d => d.ChegadaHD);
-  const dateGroupLength = dateDimension.group().reduceSum(d => d.Quantidade);
+  const dateGroupLength = dateDimension.group().reduceSum(d => d.cameras[0].data_length);
 
   const accumulatedGroup = accumulate_group(dateGroupLength);
 

@@ -19,9 +19,9 @@ export const PureD3test = (props) => {
   const createChart = (node, datum) => {
 
     // const {width, height} = props;
-    const sum = (acc, curr) => acc + Number(curr.Quantidade);
+    const sum = (acc, curr) => acc + Number(curr.cameras[0].data_length);
 
-    console.log("datum is: ", datum);
+    // console.log("datum is: ", datum);
 
 
 
