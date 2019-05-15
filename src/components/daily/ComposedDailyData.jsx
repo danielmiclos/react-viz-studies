@@ -51,8 +51,8 @@ const composedChartFunc = (divRef, dailies) => {
     .elasticY(true)
     .useRightYAxis(true)
     .colors(d3.scaleOrdinal().range(d3.schemeSet2))
-    //.renderHorizontalGridLines(false)
-    //.renderArea(false)
+    .renderHorizontalGridLines(true)
+    //.renderArea(true)
   ;
 
   composedChart
