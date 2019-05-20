@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { DataContext } from "./components/dcContext";
+import { DataContext, dcContext } from "./components/dcContext";
+import { InfoContext, infoContext } from "./components/projectInfoContext";
+
 import { DiariasBars } from './components/daily/diariasBars';
 import { SizeByDate } from './components/daily/sizeByDateLineChart';
 import { NumberTotalDisplay } from './components/daily/numberTotalDisplay';
@@ -11,30 +13,47 @@ import { ComposedDailyData } from "./components/daily/ComposedDailyData";
 import { PureD3test } from "./components/daily/PureD3test";
 
 
+function Header() {
+
+  const context = React.useContext(infoContext);
+  const info = context.info;
+
+  const date_s = new Date(info.start_date);
+  const date_e = new Date(info.end_date);
+  //console.log(date_s);
+
+  const date_start = `${date_s.getFullYear()}/${date_s.getMonth()}/${date_s.getDate()}`;
+  const date_end = `${date_e.getFullYear()}/${date_e.getMonth()}/${date_e.getDate()}`;
+
+  return <header>
+    <div>
+      <h4>Project Name:</h4>
+      <h2>{info.full_name}</h2>
+    </div>
+    <div>
+      <h4>Job ID:</h4>
+      <h2>{info.id_srv}</h2>
+    </div>
+    <div>
+      <h4>Start Date:</h4>
+      <h2>{date_start}</h2>
+    </div>
+    <div>
+      <h4>End Date:</h4>
+      <h2>{date_end}</h2>
+    </div>
+  </header>;
+}
+
 class App extends Component {
 
   render() {
     return (
       <div className="App">
         <DataContext>
-          <header>
-            <div>
-              <h4>Project Name:</h4>
-              <h2>PSI 4</h2>
-            </div>
-            <div>
-              <h4>Job ID:</h4>
-              <h2>J_POS_0000538</h2>
-            </div>
-            <div>
-              <h4>Start Date:</h4>
-              <h2>2018-05-15</h2>
-            </div>
-            <div>
-              <h4>End Date:</h4>
-              <h2>2018-08-31</h2>
-            </div>
-          </header>
+          <InfoContext>
+            <Header/>
+          </InfoContext>
           <div className="graphs">
             <div className="diariasbars">
               <div className="graph">
@@ -43,7 +62,7 @@ class App extends Component {
             </div>
             <div className="sizebydate">
               <div className="graph">
-                <ComposedDailyData />
+                <ComposedDailyData/>
               </div>
             </div>
 

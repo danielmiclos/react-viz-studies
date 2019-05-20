@@ -24,7 +24,7 @@ export class DataContext extends React.Component{
     }
 
     this.setState({loading: true});
-    fetch('./data/dailies2.json')
+    fetch('http://192.168.8.70:5010/get_lab_data/00651826-3cba-11e6-b303-06d697bf810e')
       .then(res => res.json())
       .then((data) => {
         data.forEach(d => {
