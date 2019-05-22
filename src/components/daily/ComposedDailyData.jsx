@@ -38,8 +38,8 @@ const composedChartFunc = (divRef, dailies) => {
     //.yAxisLabel("Tamanho (em Teras)")
     //.elasticY(true)
     //.renderHorizontalGridLines(true)
-    //.renderArea(true)
-    //.dotRadius(5)
+    .renderArea(true)
+    .dotRadius(5)
   ;
 
   linechart

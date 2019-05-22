@@ -9,7 +9,7 @@ const numberTotalDisplayFunc = (divRef, dailies) => {
 
   const numberTotal = dc.numberDisplay(divRef);
   const all = dailies.groupAll();
-  const sumTotal = all.reduceSum(d => d.Quantidade);
+  const sumTotal = all.reduceSum(d => d.cameras[0].data_length);
 
 
 

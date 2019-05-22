@@ -11,6 +11,7 @@ import {TableDiaria} from "./components/daily/tableDiarias";
 import { LineChartJobs } from "./components/LineChartJobs";
 import { ComposedDailyData } from "./components/daily/ComposedDailyData";
 import { PureD3test } from "./components/daily/PureD3test";
+import CameraPie from "./components/daily/CameraPie";
 
 
 function Header() {
@@ -42,10 +43,31 @@ function Header() {
       <h4>End Date:</h4>
       <h2>{date_end}</h2>
     </div>
+
+        <div>Produtor executivo: <strong>{info.executive_producer}</strong>
+          <br/> Produtora : <strong>{info.producer}</strong>
+        </div>
+        <div>
+          <h4>Cameras:</h4>
+          A: <strong>{info.a_camera_model[0]}</strong><br/>
+          B: <strong>{info.b_camera_model[0]}</strong>
+        </div>
+
   </header>;
 }
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {dailydetails: {}};
+  }
+
+  setDaily = (data) =>  {
+    console.log(data);
+    return this.setState({dailydetails: data})
+  };
+
 
   render() {
     return (
@@ -74,10 +96,10 @@ class App extends Component {
             <div className="minidata">
               <div className="graph">
                 <PureD3test title="Total Storage"/>
-              </div>
-              <div className="graph">
+
                 <div className="numberTotal">
                   <NumberTotalDisplay/>
+                  <br/>&nbsp;
                 </div>
               </div>
               <br/>
@@ -85,10 +107,20 @@ class App extends Component {
                 <BackupStatusPie/>
               </div>
             </div>
+            <div className="dailydetails">
+              <div className="graph">
 
+                {this.state.dailydetails ? (
+                  <h4>
+                    {this.state.dailydetails.daily_name}<br/>
+                  </h4>
+                ) : 'no data yet'}
+                <CameraPie />
+              </div>
+            </div>
             <div className="tablediarias">
               <div className="graph">
-                <TableDiaria/>
+                <TableDiaria setSelectedDaily={this.setDaily}/>
               </div>
             </div>
 

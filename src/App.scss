@@ -191,13 +191,25 @@ table tr td {
 .tablediarias {
   box-sizing: border-box;
   grid-row: 3;
-  grid-column: 1 / span 3;
+  grid-column: 2 / span 2;
   width: 100%;
   overflow:hidden;
   overflow-y: auto;
 
   .dc-table {
     width: 100%;
+  }
+}
+
+.dailydetails {
+  box-sizing: border-box;
+  grid-row: 3;
+  grid-column: 1 ;
+  width: 100%;
+  overflow:hidden;
+  overflow-y: auto;
+  .graph {
+    height:100%;
   }
 }
 

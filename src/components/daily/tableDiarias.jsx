@@ -11,7 +11,7 @@ export const TableDiaria = (props) => {
   const dailies = context.dailies;
   const div = React.useRef(null);
   React.useEffect(() => {
-    const newChart = makeTable(div.current, dailies);
+    const newChart = makeTable(div.current, dailies, props.setSelectedDaily);
     newChart.render();
     updateChart(newChart);
   }, 1);
@@ -26,7 +26,7 @@ export const TableDiaria = (props) => {
 
 }
 
-const makeTable = (divRef, datum) => {
+const makeTable = (divRef, datum, setDaily) => {
   const dailyTable = dc.dataTable(divRef);
   const dateParse = d3.timeFormat("%d/%m/%Y");
 
@@ -64,7 +64,7 @@ const makeTable = (divRef, datum) => {
 
   dailyTable
     .renderlet(function (chart) {
-      chart.selectAll('tr').on('click', (d) => console.log('nana', d));
+      chart.selectAll('tr').on('click', (d) => setDaily(d));
     });
 
 

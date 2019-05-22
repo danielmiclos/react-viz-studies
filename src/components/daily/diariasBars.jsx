@@ -15,8 +15,8 @@ const diariasBarsFunc = (divRef, dailies) => {
 
  print_filter(diariaDimension);
  //console.log(group.top(Infinity).length);
-  console.log('after')
-  print_filter(diariaDimension.group());
+  //console.log('after')
+  //print_filter(diariaDimension.group());
 
 
 
