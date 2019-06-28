@@ -16,6 +16,16 @@ export class DataContext extends React.Component{
   }
 
   componentDidMount() {
+
+    console.log('CAN I HAZ PORT:', process.env);
+
+
+    if(process.env.NODE_ENV === "development") {
+
+    }
+
+    //console.log('CAN I HAZ location part 2:', this.findGetParameter("q"));
+
     if(this.state.hasDailies) {
       return;
     }
@@ -23,8 +33,10 @@ export class DataContext extends React.Component{
       return;
     }
 
+    const env_url = `${process.env.REACT_APP_SCHEMA}://${process.env.REACT_APP_HOST}:${process.env.REACT_APP_HOST_PORT}`;
+
     this.setState({loading: true});
-    fetch('http://192.168.8.70:5010/get_lab_data/00651826-3cba-11e6-b303-06d697bf810e')
+    fetch(`${env_url}/get_lab_data/${this.findGetParameter("d")}`)
       .then(res => res.json())
       .then((data) => {
         data.forEach(d => {
@@ -39,8 +51,21 @@ export class DataContext extends React.Component{
 
 
         this.setState({loading:false, hasDailies: true});
-      }, (error) => console.log("ERROR BURRÃO: ", error))
+      }, (error) => console.log("ERROR: ", error))
 
+  }
+
+  findGetParameter(parameterName) {
+    var result = null,
+      tmp = [];
+    window.location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+              tmp = item.split("=");
+              if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            });
+    return result;
   }
 
   render(){

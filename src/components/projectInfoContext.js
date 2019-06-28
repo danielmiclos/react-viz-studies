@@ -10,15 +10,18 @@ export class InfoContext extends React.Component{
   }
 
   componentDidMount() {
+    console.log('CAN I HAZ PROPS: ', this.props.token);
+
     if(this.state.hasData) {
       return;
     }
     if(this.state.loading) {
       return;
     }
+    const env_url = `${process.env.REACT_APP_SCHEMA}://${process.env.REACT_APP_HOST}:${process.env.REACT_APP_HOST_PORT}`;
 
     this.setState({loading: true});
-    fetch('http://192.168.8.70:5010/get_project_info/cbb7c109-bbc8-4a7d-b7be-6d4c8841cde3')
+    fetch(`${env_url}/get_project_info/${this.findGetParameter("info")}`)
       .then(res => res.json())
       .then((data) => {
 
@@ -33,6 +36,19 @@ export class InfoContext extends React.Component{
         this.setState({loading:false, hasData: true});
       }, (error) => console.log("ERROR BURRÃO: ", error))
 
+  }
+
+  findGetParameter(parameterName) {
+    var result = null,
+      tmp = [];
+    window.location.search
+          .substr(1)
+          .split("&")
+          .forEach(function (item) {
+            tmp = item.split("=");
+            if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+          });
+    return result;
   }
 
   render(){

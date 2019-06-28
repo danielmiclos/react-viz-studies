@@ -72,8 +72,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <DataContext>
-          <InfoContext>
+        <DataContext token="00651826-3cba-11e6-b303-06d697bf810e">
+          <InfoContext token="cbb7c109-bbc8-4a7d-b7be-6d4c8841cde3">
             <Header/>
           </InfoContext>
           <div className="graphs">
