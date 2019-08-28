@@ -34,7 +34,7 @@ export class InfoContext extends React.Component{
 
 
         this.setState({loading:false, hasData: true});
-      }, (error) => console.log("ERROR BURRÃO: ", error))
+      }, (error) => console.log("ERROR: ", error))
 
   }
 

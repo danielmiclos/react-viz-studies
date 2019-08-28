@@ -34,11 +34,13 @@ export class DataContext extends React.Component{
     }
 
     const env_url = `${process.env.REACT_APP_SCHEMA}://${process.env.REACT_APP_HOST}:${process.env.REACT_APP_HOST_PORT}`;
+    console.log('app url: ', env_url);
 
     this.setState({loading: true});
     fetch(`${env_url}/get_lab_data/${this.findGetParameter("d")}`)
       .then(res => res.json())
       .then((data) => {
+        console.log("raw data:", data);
         data.forEach(d => {
           d.ChegadaHD = dateFormatParser(d.daily_date);
           d.daily_month = d3.timeMonth(d.daily_date);
@@ -65,6 +67,7 @@ export class DataContext extends React.Component{
               tmp = item.split("=");
               if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
             });
+    console.log('result:', result);
     return result;
   }
 
