@@ -12,6 +12,7 @@ import { LineChartJobs } from "./components/LineChartJobs";
 import { ComposedDailyData } from "./components/daily/ComposedDailyData";
 import { PureD3test } from "./components/daily/PureD3test";
 import CameraPie from "./components/daily/CameraPie";
+import { GridDiarias } from "./components/daily/gridDiarias";
 
 
 function Header() {
@@ -124,12 +125,18 @@ class App extends Component {
               </div>
             </div>
 
+
+
           </div>
 
           <div className="graph">
 
           </div>
-
+          <div className="tablediarias2">
+            <div className="graph">
+              <GridDiarias setSelectedDaily={this.setDaily}/>
+            </div>
+          </div>
         </DataContext>
       </div>
     );

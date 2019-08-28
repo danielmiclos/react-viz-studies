@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fe2e26c-4cd7-4498-aa2f-3b70337eec0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/daily/gridDiarias.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dcContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dcContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projectInfoContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projectInfoContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +146,7 @@
       <workItem from="1566589190392" duration="14000" />
       <workItem from="1566590805846" duration="176000" />
       <workItem from="1566939824450" duration="1498000" />
-      <workItem from="1567013125389" duration="332000" />
+      <workItem from="1567013125389" duration="4358000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1554847910013</created>
@@ -308,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561758679938</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="- first commit for cam aggregation">
+      <created>1567013613822</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1567013613822</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +355,7 @@
     <MESSAGE value="starting to add a daily pie chart for cameras" />
     <MESSAGE value="removing .env from tracked files" />
     <MESSAGE value="- adding .env vars&#10;- adding get vars for data" />
-    <option name="LAST_COMMIT_MESSAGE" value="- adding .env vars&#10;- adding get vars for data" />
+    <MESSAGE value="- first commit for cam aggregation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- first commit for cam aggregation" />
   </component>
 </project>
