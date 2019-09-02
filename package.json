@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.3",
+    "@material-ui/icons": "^4.2.1",
+    "clsx": "^1.0.4",
     "crossfilter2": "^1.4.7",
     "d3": "^5.9.2",
     "dc": "^3.0.12",
