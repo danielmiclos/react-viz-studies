@@ -4,15 +4,14 @@ import { DataContext, dcContext } from "./components/dcContext";
 import { InfoContext, infoContext } from "./components/projectInfoContext";
 
 import { DiariasBars } from './components/daily/diariasBars';
-import { SizeByDate } from './components/daily/sizeByDateLineChart';
 import { NumberTotalDisplay } from './components/daily/numberTotalDisplay';
 import { BackupStatusPie } from './components/daily/backupStatusPie';
 import {TableDiaria} from "./components/daily/tableDiarias";
-import { LineChartJobs } from "./components/LineChartJobs";
 import { ComposedDailyData } from "./components/daily/ComposedDailyData";
 import { PureD3test } from "./components/daily/PureD3test";
 import CameraPie from "./components/daily/CameraPie";
-import { GridDiarias } from "./components/daily/gridDiarias";
+
+import { DailyList } from './components/daily/DailyList';
 
 
 function Header() {
@@ -134,7 +133,7 @@ class App extends Component {
           </div>
           <div className="tablediarias2">
             <div className="graph">
-              <GridDiarias setSelectedDaily={this.setDaily}/>
+              <DailyList />
             </div>
           </div>
         </DataContext>

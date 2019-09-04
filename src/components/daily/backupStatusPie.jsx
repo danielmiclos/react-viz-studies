@@ -14,7 +14,7 @@ const backupStatusPieFunc = (divRef, dalies) => {
   const all = dalies.groupAll();
   const sumTotal = all.reduceSum(d => 1).value();
 
- // print_filter(statusGroup);
+
 
   backupStatus
     .width(150)

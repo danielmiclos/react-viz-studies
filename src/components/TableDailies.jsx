@@ -10,25 +10,28 @@ export default function TableDailies(props) {
   const context = React.useContext(dcContext);
   const dailies = context.dailies;
   const dateDimension = dailies.dimension(d => d.daily_date);
+  const grouper = dailies.all();
 
-  console.log('dailies', dateDimension.group().top(Infinity));
+  //console.log('dailies', dateDimension.group().top(Infinity));
+  console.log('grouper: ', grouper);
 
   const generateTable = () => {
     console.log('here')
-    if(!props.tableData) {
-      console.log('just returned');
-      return;
-    }
-    return props.tableData.map(item => {
+    // if(!props.tableData) {
+    //   console.log('just returned');
+    //   return;
+    // }
+    return grouper.map(item => {
       return (
         <tr key={uuid()}>
-          {this.getTableColumns(item, props.columns)}
+          {getTableColumns(item, props.columns)}
         </tr>
       )
     })
   };
 
   const getTableColumns = (line, columns, tagName='td', opts={}) => {
+    console.log('getTable Columns', line);
     return columns.map(item => React.createElement(tagName,{...opts, key: uuid()}, [line[item]]))
   };
 
@@ -48,7 +51,7 @@ export default function TableDailies(props) {
               <thead>
                 <tr>
                   {/*{this.getTableHeaders(props.colLabels)}*/}
-                  {console.log('dailies', dateDimension.group().top(Infinity))}
+                  {/*{console.log('dailies', dateDimension.group().top(Infinity))}*/}
                 </tr>
               </thead>
               <tbody>

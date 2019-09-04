@@ -37,7 +37,8 @@ export class DataContext extends React.Component{
     console.log('app url: ', env_url);
 
     this.setState({loading: true});
-    fetch(`${env_url}/get_lab_data/${this.findGetParameter("d")}`)
+    //fetch(`${env_url}/get_lab_data/${this.findGetParameter("d")}`)
+    fetch(`./data/dashboard-data-valid.json`)
       .then(res => res.json())
       .then((data) => {
         console.log("raw data:", data);
