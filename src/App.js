@@ -120,7 +120,7 @@ class App extends Component {
             </div>
             <div className="tablediarias">
               <div className="graph">
-                <TableDiaria setSelectedDaily={this.setDaily}/>
+                <DailyList />
               </div>
             </div>
 
@@ -130,11 +130,6 @@ class App extends Component {
 
           <div className="graph">
 
-          </div>
-          <div className="tablediarias2">
-            <div className="graph">
-              <DailyList />
-            </div>
           </div>
         </DataContext>
       </div>

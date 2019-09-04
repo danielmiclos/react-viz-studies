@@ -14,6 +14,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Done from '@material-ui/icons/Done';
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
@@ -22,6 +23,8 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       width: '100%',
+      background: '#333',
+      backgroundColor: '#333'
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
@@ -52,6 +55,14 @@ const useStyles = makeStyles((theme) =>
         textDecoration: 'underline',
       },
     },
+    expansion: {
+      background: '#333333',
+      backgroundColor: '#333333',
+      border: `solid 1px red`,
+    },
+    green  : {
+      color: '#00FF33',
+    }
   }),
 );
 
@@ -63,6 +74,8 @@ export const DailyList = (props) => {
   const [content, setContent] = React.useState([]);
   const dailies = context.dailies;
   const div = React.useRef(null);
+
+  const dateParse = d3.timeFormat("%d/%m/%Y");
 
 
   React.useEffect(() => {
@@ -105,9 +118,9 @@ export const DailyList = (props) => {
 
     const testGrid = gridList(divRef);
 
-    const maconha = dc.chartRegistry;
+    const rChart = dc.chartRegistry;
 
-    maconha.register(testGrid);
+    rChart.register(testGrid);
 
     return testGrid;
 
@@ -116,18 +129,27 @@ export const DailyList = (props) => {
   const showList = (conteudo) => {
     return conteudo.map(d => {
       return (
-        <ExpansionPanel>
+        <ExpansionPanel classes={classes.expansion}>
           <ExpansionPanelSummary
+            classes={classes.expansion}
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1c-content"
             id="panel1c-header"
           >
-            <div >
-              <Typography >{d.daily_name}</Typography>
+            <div className={classes.column}>
+              <Typography className={classes.heading}>Diária: {d.daily_name}</Typography>
+            </div>
+            <div className={classes.column}>
+              <Typography className={classes.heading}>Data: {dateParse(d.ChegadaHD)}</Typography>
             </div>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography variant="caption">{d.daily_name}</Typography>
+          <ExpansionPanelDetails className={classes.details}>
+            <div className={classes.column}>
+              <Typography variant="caption">Cameras</Typography>
+            </div>
+            <div className={classes.column} >
+              {listCameras(d.cameras)}
+            </div>
           </ExpansionPanelDetails>
         </ExpansionPanel>
 
@@ -135,11 +157,28 @@ export const DailyList = (props) => {
     });
   };
 
+  const listCameras = (cameras) => {
+    return cameras.map((d) => (
+      <div>
+        <div><Typography variant="caption">Camera id:</Typography> {d.camera_id}</div>
+        <div><Typography variant="caption">Data length:</Typography> {d.data_length}{d.data_length_unit}</div>
+        <div><Typography variant="caption">Media duration</Typography> {d.media_duration}</div>
+        <div><Typography variant="caption">First Copy:</Typography> {d.first_copy}</div>
+        <div><Typography variant="caption">Second Copy:</Typography> {d.second_copy}</div>
+        <div><Typography variant="caption">Media Volume:</Typography> {d.media_volume}</div>
+        <div><Typography variant="caption">HD Log Status:</Typography> {d.hd_log_status ? <Done className={classes.green}/> : ''}</div>
+        <div><Typography variant="caption">LTO Log Status</Typography> {d.lto_log_status ? <Done className={classes.green}/> : ''}</div>
+        <hr/>
+      </div>
+
+    ));
+  };
+
   return (
-    <div className="dc-table">
-      <h2>Amapoa</h2>
+    <div className="dc-table" style={{width: '90%'}}>
+      <h2>List</h2>
       {showList(content)}
-      <div ref={div} className="table-layout" />
+      <div ref={div} className=""  />
     </div>
   )
 
