@@ -11,130 +11,129 @@ import { ComposedDailyData } from "./components/daily/ComposedDailyData";
 import { PureD3test } from "./components/daily/PureD3test";
 import CameraPie from "./components/daily/CameraPie";
 
-import { DailyList } from './components/daily/DailyList';
+import { DailyList } from './components/DailyList';
 
+import Typography from '@material-ui/core/Typography';
+
+import Grid from '@material-ui/core/Grid';
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/styles';
+import {makeStyles, createStyles, Theme} from '@material-ui/core';
+import createTheme from './createTheme';
+
+
+const useStyle = makeStyles((theme) => createStyles({
+  root: {
+    flexGrow: 1,
+    display: 'flex',
+    flexWrap: 'wrap',
+    margin: theme.spacing(3)
+  },
+  formControl: {
+    margin: theme.spacing(0),
+    minWidth: 120,
+  },
+  button: {
+    margin: theme.spacing(1),
+  },
+  displayFlex: {
+    display: 'flex'
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+  container: {
+    padding: theme.spacing(3)
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+  },
+  textMultiline: {
+    minHeight: '30vh'
+  }
+}));
 
 function Header() {
 
-  const context = React.useContext(infoContext);
-  const info = context.info;
+  const classes = useStyle();
 
-  const date_s = new Date(info.start_date);
-  const date_e = new Date(info.end_date);
-  //console.log(date_s);
+  const context =  React.useContext(infoContext);
+  const info =  context.info;
 
-  const date_start = `${date_s.getFullYear()}/${date_s.getMonth()}/${date_s.getDate()}`;
-  const date_end = `${date_e.getFullYear()}/${date_e.getMonth()}/${date_e.getDate()}`;
+  let date_start = "";
+  let date_end = "";
 
-  return <header>
-    <div>
-      <h4>Project Name:</h4>
-      <h2>{info.full_name}</h2>
-    </div>
-    <div>
-      <h4>Job ID:</h4>
-      <h2>{info.id_srv}</h2>
-    </div>
-    <div>
-      <h4>Start Date:</h4>
-      <h2>{date_start}</h2>
-    </div>
-    <div>
-      <h4>End Date:</h4>
-      <h2>{date_end}</h2>
-    </div>
+  if(info !== undefined) {
 
-        <div>Produtor executivo: <strong>{info.executive_producer}</strong>
-          <br/> Produtora : <strong>{info.producer}</strong>
-        </div>
-        <div>
-          <h4>Cameras:</h4>
+    const date_s = new Date(info.start_date);
+    const date_e = new Date(info.end_date);
+
+    date_start = `${date_s.getFullYear()}/${date_s.getMonth()}/${date_s.getDate()}`;
+    date_end = `${date_e.getFullYear()}/${date_e.getMonth()}/${date_e.getDate()}`;
+  }
+
+  return (
+    <Grid container xs={12} lg={10} className={classes.root}>
+      <Grid item lg={3} sm={6}>
+        <Typography variant='h5'>Project Name:</Typography>
+        <Typography variant='h4'>{info.full_name || ""}</Typography>
+      </Grid>
+      <Grid item lg={3} sm={6}>
+        <Typography variant='h5'>Job ID:</Typography>
+        <Typography variant='h4'>{info.id_srv || ""}</Typography>
+      </Grid>
+      <Grid item lg={3} sm={6}>
+        <Typography variant='h5'>Start Date:</Typography>
+        <Typography variant='h4'>{date_start || ""}</Typography>
+      </Grid>
+      <Grid item lg={3} sm={6}>
+        <Typography variant='h5'>End Date:</Typography>
+        <Typography variant='h4'>{date_end || ""}</Typography>
+      </Grid>
+      <Grid item lg={6}>
+        <Typography variant='caption'>Produtor executivo: <strong>{info.executive_producer || ""}</strong><br/>
+          Produtora : <strong>{info.producer || ""}</strong>
+        </Typography>
+      </Grid>
+      <Grid item lg={6}>
+        <Typography variant='caption'><strong>Cameras:</strong><br/>
           A: <strong>{info.a_camera_model[0]}</strong><br/>
           B: <strong>{info.b_camera_model[0]}</strong>
-        </div>
-
-  </header>;
+        </Typography>
+      </Grid>
+    </Grid>
+  );
 }
 
-class App extends Component {
+export default function App() {
+  // const [dailyDetails, setDailyDetails] = React.useContext<{}>();
 
-  constructor(props) {
-    super(props);
-    this.state = {dailydetails: {}};
-  }
+  const classes = useStyle();
 
-  setDaily = (data) =>  {
-    console.log(data);
-    return this.setState({dailydetails: data})
-  };
-
-
-  render() {
-    return (
-      <div className="App">
-        <DataContext token="00651826-3cba-11e6-b303-06d697bf810e">
-          <InfoContext token="cbb7c109-bbc8-4a7d-b7be-6d4c8841cde3">
-            <Header/>
-          </InfoContext>
-          <div className="graphs">
-            <div className="diariasbars">
-              <div className="graph">
+  return(
+    <>
+      <ThemeProvider theme={createTheme}>
+        <CssBaseline/>
+          <DataContext token="00651826-3cba-11e6-b303-06d697bf810e">
+            <InfoContext token="cbb7c109-bbc8-4a7d-b7be-6d4c8841cde3">
+              <Header/>
+            </InfoContext>
+            <Grid container md={11} className={classes.root}>
+              <Grid item md={12}>
                 <DiariasBars/>
-              </div>
-            </div>
-            <div className="sizebydate">
-              <div className="graph">
+              </Grid>
+              <Grid item md={12}>
                 <ComposedDailyData/>
-              </div>
-            </div>
+              </Grid>
 
-            {/*<div className="databydate">*/}
-            {/*  <div className="graph">*/}
-            {/*    <LineChartJobs/>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
-            <div className="minidata">
-              <div className="graph">
-                <PureD3test title="Total Storage"/>
-
-                <div className="numberTotal">
-                  <NumberTotalDisplay/>
-                  <br/>&nbsp;
-                </div>
-              </div>
-              <br/>
-              <div className="graph">
-                <BackupStatusPie/>
-              </div>
-            </div>
-            <div className="dailydetails">
-              <div className="graph">
-
-                {this.state.dailydetails ? (
-                  <h4>
-                    {this.state.dailydetails.daily_name}<br/>
-                  </h4>
-                ) : 'no data yet'}
-                <CameraPie />
-              </div>
-            </div>
-            <div className="tablediarias">
-              <div className="graph">
+              <Grid item md={12}>
                 <DailyList />
-              </div>
-            </div>
-
-
-
-          </div>
-
-          <div className="graph">
-
-          </div>
-        </DataContext>
-      </div>
-    );
-  }
+              </Grid>
+            </Grid>
+          </DataContext>
+      </ThemeProvider>
+    </>
+  );
 }
-
-export default App;
