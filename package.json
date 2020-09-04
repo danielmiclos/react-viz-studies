@@ -6,7 +6,7 @@
     "crossfilter2": "^1.4.7",
     "d3": "^5.9.2",
     "dc": "^3.0.12",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
